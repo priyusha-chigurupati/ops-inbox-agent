@@ -67,6 +67,34 @@ Run all tests:
 python -m unittest discover -s tests
 ```
 
+## Phase 3 Verification
+
+Switch to the classification branch:
+
+```powershell
+git checkout feature/classification-engine
+```
+
+Install dependencies if needed:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
+
+Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Open the local URL shown by Streamlit. The review queue should show sample inbox items with category, priority, owner, confidence, and matched signal terms.
+
 ## Streamlit Troubleshooting
 
 If this command fails:
