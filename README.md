@@ -6,9 +6,9 @@ This repository is being built step by step as a production-minded portfolio pro
 
 ## Current Status
 
-Phase 2: sample inbox data.
+Phase 3: classification engine.
 
-The app currently includes the clean project structure, realistic sample inbox records, a typed data loader, configuration, smoke tests, and a placeholder Streamlit entrypoint. Classification and workflow features start in the next phase.
+The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, tests, and a Streamlit review queue preview.
 
 ## Tech Stack
 
@@ -75,4 +75,6 @@ Completed branches:
 ```text
 feature/project-scaffold
 feature/sample-inbox-data
+feature/setup-run-commands
+feature/classification-engine
 ```
