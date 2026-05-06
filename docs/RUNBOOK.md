@@ -32,7 +32,7 @@ Activate it:
 Install dependencies:
 
 ```powershell
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 ```
 
 Run tests:
@@ -44,7 +44,7 @@ python -m unittest discover -s tests
 Run the app:
 
 ```powershell
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ## Phase 2 Verification
@@ -65,4 +65,30 @@ Run all tests:
 
 ```powershell
 python -m unittest discover -s tests
+```
+
+## Streamlit Troubleshooting
+
+If this command fails:
+
+```powershell
+streamlit run app.py
+```
+
+Use this command instead:
+
+```powershell
+python -m streamlit run app.py
+```
+
+If Python says Streamlit is not installed, run:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+```
+
+Then try again:
+
+```powershell
+python -m streamlit run app.py
 ```
