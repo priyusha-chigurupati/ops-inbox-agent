@@ -6,9 +6,9 @@ This repository is being built step by step as a production-minded portfolio pro
 
 ## Current Status
 
-Phase 1: project scaffold.
+Phase 2: sample inbox data.
 
-The app currently includes the clean project structure, configuration, smoke test, and placeholder Streamlit entrypoint. Feature work starts after this scaffold is approved.
+The app currently includes the clean project structure, realistic sample inbox records, a typed data loader, configuration, smoke tests, and a placeholder Streamlit entrypoint. Classification and workflow features start in the next phase.
 
 ## Tech Stack
 
@@ -49,6 +49,8 @@ python -m unittest discover -s tests
 
 ```text
 app.py
+data/
+  sample_inbox.json
 src/
   ops_inbox/
     core/
@@ -64,8 +66,9 @@ docs/
 
 Work is organized by feature branches. Each branch should add one meaningful capability, be tested, then merge back to `main`.
 
-First branch:
+Completed branches:
 
 ```text
 feature/project-scaffold
+feature/sample-inbox-data
 ```

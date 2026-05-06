@@ -46,3 +46,23 @@ Run the app:
 ```powershell
 streamlit run app.py
 ```
+
+## Phase 2 Verification
+
+Check the current branch:
+
+```powershell
+git branch --show-current
+```
+
+Inspect the sample data:
+
+```powershell
+Get-Content .\data\sample_inbox.json
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
