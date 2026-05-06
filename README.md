@@ -30,13 +30,13 @@ python -m venv .venv
 Install dependencies:
 
 ```powershell
-pip install -r requirements-dev.txt
+python -m pip install -r requirements-dev.txt
 ```
 
 Run the app:
 
 ```powershell
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 Run tests:
@@ -44,6 +44,10 @@ Run tests:
 ```powershell
 python -m unittest discover -s tests
 ```
+
+If PowerShell says `streamlit` is not recognized, use `python -m streamlit run app.py`. If Python says `No module named streamlit`, install the dependencies again with `python -m pip install -r requirements-dev.txt` while the virtual environment is active.
+
+If pip tries to compile packages on Windows and mentions Visual Studio or `vswhere.exe`, recreate the virtual environment and install again. The project keeps dependencies minimal so pip can use compatible prebuilt wheels for your Python version.
 
 ## Folder Structure
 
