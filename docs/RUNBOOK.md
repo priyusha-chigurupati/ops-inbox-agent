@@ -92,3 +92,26 @@ Then try again:
 ```powershell
 python -m streamlit run app.py
 ```
+
+## Dependency Install Troubleshooting
+
+If pip fails while installing `pandas` and mentions Visual Studio, Meson, or `vswhere.exe`, the environment is trying to compile a package from source. Use a clean virtual environment and reinstall:
+
+```powershell
+deactivate
+Remove-Item -Recurse -Force .\.venv
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements-dev.txt
+python -m unittest discover -s tests
+python -m streamlit run app.py
+```
+
+Check your Python version:
+
+```powershell
+python --version
+```
+
+Python 3.11 or 3.12 is recommended for the smoothest Windows setup.
