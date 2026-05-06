@@ -9,3 +9,7 @@ This log records real work from the start of the project. It does not invent pri
 - Started the `feature/project-scaffold` branch.
 - Added the initial Streamlit/Python project scaffold.
 - Added smoke tests for metadata and folder structure.
+- Started the `feature/sample-inbox-data` branch.
+- Added realistic inbound messages across support, billing, sales, scheduling, vendor, account management, and complaint workflows.
+- Added a typed sample inbox loader.
+- Added validation tests for dataset coverage, required fields, preview formatting, and datetime parsing.

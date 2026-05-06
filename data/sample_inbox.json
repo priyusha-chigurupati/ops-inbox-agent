@@ -1,0 +1,98 @@
+[
+  {
+    "id": "msg-1001",
+    "received_at": "2026-05-05T08:14:00-05:00",
+    "sender_name": "Maya Thompson",
+    "sender_email": "maya.thompson@northlinehardware.com",
+    "sender_company": "Northline Hardware",
+    "subject": "Need help updating delivery window",
+    "body": "Hi team, our order was supposed to arrive this Thursday, but our receiving dock will be closed from 1 PM to 4 PM. Can someone move the delivery to Friday morning or confirm an earlier slot on Thursday? Please call me at 918-555-0142 if that is faster.",
+    "channel": "email",
+    "expected_category": "scheduling",
+    "expected_priority": "medium"
+  },
+  {
+    "id": "msg-1002",
+    "received_at": "2026-05-05T08:36:00-05:00",
+    "sender_name": "Eric Patel",
+    "sender_email": "eric.patel@ridgewaylabs.com",
+    "sender_company": "Ridgeway Labs",
+    "subject": "Duplicate charge on April invoice",
+    "body": "I reviewed invoice INV-4481 and it looks like the monthly platform fee was charged twice. The total should be $2,400, but the invoice shows $4,800. Can you correct this before our payment run tomorrow?",
+    "channel": "email",
+    "expected_category": "billing",
+    "expected_priority": "high"
+  },
+  {
+    "id": "msg-1003",
+    "received_at": "2026-05-05T09:05:00-05:00",
+    "sender_name": "Dana Brooks",
+    "sender_email": "dana@brightpathcare.com",
+    "sender_company": "BrightPath Care",
+    "subject": "Interested in automating intake forms",
+    "body": "We found your operations automation page and would like to discuss intake automation for three clinic locations. We currently process about 600 forms per month and want to reduce manual entry. Are you available for a call next week?",
+    "channel": "web_form",
+    "expected_category": "sales_lead",
+    "expected_priority": "medium"
+  },
+  {
+    "id": "msg-1004",
+    "received_at": "2026-05-05T09:18:00-05:00",
+    "sender_name": "Luis Romero",
+    "sender_email": "luis.romero@oakvalleyfoods.com",
+    "sender_company": "Oak Valley Foods",
+    "subject": "Production line is blocked",
+    "body": "This is urgent. The scanner integration stopped sending batch records at 8:50 AM and our packing line is paused. We need an engineer to respond immediately. The last successful batch ID was PKG-88420.",
+    "channel": "email",
+    "expected_category": "support_issue",
+    "expected_priority": "critical"
+  },
+  {
+    "id": "msg-1005",
+    "received_at": "2026-05-05T10:02:00-05:00",
+    "sender_name": "Nina Chen",
+    "sender_email": "nina.chen@harborstaffing.com",
+    "sender_company": "Harbor Staffing",
+    "subject": "Updated vendor insurance certificate",
+    "body": "Attached is our renewed insurance certificate for your vendor records. The policy runs through May 31, 2027. Let me know if your compliance team needs anything else.",
+    "channel": "email",
+    "expected_category": "vendor",
+    "expected_priority": "low"
+  },
+  {
+    "id": "msg-1006",
+    "received_at": "2026-05-05T10:41:00-05:00",
+    "sender_name": "Jordan Miles",
+    "sender_email": "jordan.miles@crestviewretail.com",
+    "sender_company": "Crestview Retail Group",
+    "subject": "Cannot access dashboard before board review",
+    "body": "I am locked out of the reporting dashboard and have a board review at 2 PM today. Password reset did not send an email. Please escalate this because I need the April numbers before the meeting.",
+    "channel": "email",
+    "expected_category": "support_issue",
+    "expected_priority": "high"
+  },
+  {
+    "id": "msg-1007",
+    "received_at": "2026-05-05T11:27:00-05:00",
+    "sender_name": "Avery Morgan",
+    "sender_email": "avery.morgan@bluecedarlogistics.com",
+    "sender_company": "Blue Cedar Logistics",
+    "subject": "Contract renewal question",
+    "body": "Our renewal is coming up on June 15. Can you send the current pricing and confirm whether the same service levels apply if we add two more locations in Q3?",
+    "channel": "email",
+    "expected_category": "account_management",
+    "expected_priority": "medium"
+  },
+  {
+    "id": "msg-1008",
+    "received_at": "2026-05-05T12:11:00-05:00",
+    "sender_name": "Priya Shah",
+    "sender_email": "priya.shah@westmarkservices.com",
+    "sender_company": "Westmark Services",
+    "subject": "Complaint about missed follow-up",
+    "body": "I have asked twice for a status update and still have not received a clear answer. This is becoming frustrating for our team. Please have a manager contact me today with a timeline.",
+    "channel": "email",
+    "expected_category": "complaint",
+    "expected_priority": "high"
+  }
+]
