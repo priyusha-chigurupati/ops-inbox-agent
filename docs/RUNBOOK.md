@@ -117,6 +117,28 @@ python -m streamlit run app.py
 
 Open the local URL shown by Streamlit. Each review queue item should now show extracted details such as sender email, phone number, invoice number, dollar amount, date, time, or operational ID when present.
 
+## Phase 5 Verification
+
+Switch to the urgency routing branch:
+
+```powershell
+git checkout feature/urgency-routing
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
+
+Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Open the local URL shown by Streamlit. Each review card should show an urgency score, SLA target, routing reason, and manager-review warning when the item needs escalation.
+
 ## Streamlit Troubleshooting
 
 If this command fails:
