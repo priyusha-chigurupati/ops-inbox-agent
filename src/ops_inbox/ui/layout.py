@@ -4,6 +4,7 @@ from src.ops_inbox.core.classifier import classify_messages
 from src.ops_inbox.core.entity_extractor import extract_entities, format_entities
 from src.ops_inbox.config import APP_NAME
 from src.ops_inbox.data.inbox_repository import load_sample_messages
+from src.ops_inbox.services.reply_drafts import build_reply_draft
 from src.ops_inbox.services.routing import build_routing_decision
 
 
@@ -43,7 +44,9 @@ def render_page_shell() -> None:
     st.caption("Sample messages are classified with deterministic rules so results are explainable and testable.")
 
     for message, result in classified:
+        entities = extract_entities(message)
         routing = build_routing_decision(message, result)
+        draft = build_reply_draft(message, result, entities, routing)
         with st.container(border=True):
             cols = st.columns([2.3, 1, 1, 1])
             cols[0].markdown(f"**{message.subject}**")
@@ -56,13 +59,22 @@ def render_page_shell() -> None:
             st.caption(f"{routing.sla} · {routing.reason}")
             if routing.needs_manager_review:
                 st.warning("Manager review recommended", icon=":material/report:")
-            entity_rows = format_entities(extract_entities(message))
+            entity_rows = format_entities(entities)
             if entity_rows:
                 st.markdown(" · ".join(f"`{row}`" for row in entity_rows))
             st.caption(
                 f"Confidence: {int(result.confidence * 100)}% · Signals: "
                 f"{', '.join(result.matched_terms) or 'fallback'}"
             )
+            with st.expander("Suggested reply", expanded=False):
+                st.caption(f"Tone: {draft.tone} · Next step: {draft.next_step}")
+                st.text_area(
+                    "Draft",
+                    value=draft.body,
+                    height=170,
+                    key=f"reply-{message.id}",
+                    label_visibility="collapsed",
+                )
 
 
 def _priority_color(priority: str) -> str:

@@ -139,6 +139,28 @@ python -m streamlit run app.py
 
 Open the local URL shown by Streamlit. Each review card should show an urgency score, SLA target, routing reason, and manager-review warning when the item needs escalation.
 
+## Phase 6 Verification
+
+Switch to the reply drafting branch:
+
+```powershell
+git checkout feature/reply-drafting
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
+
+Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Open the local URL shown by Streamlit. Each review card should include a `Suggested reply` expander with an editable draft, tone, and next-step guidance.
+
 ## Streamlit Troubleshooting
 
 If this command fails:
