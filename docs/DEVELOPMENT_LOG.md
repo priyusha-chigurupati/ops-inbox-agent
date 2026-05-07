@@ -26,3 +26,7 @@ This log records real work from the start of the project. It does not invent pri
 - Added urgency scoring, SLA targets, manager-review flags, and routing reasons.
 - Updated the Streamlit review queue with urgency progress indicators and manager review warnings.
 - Added tests for critical support, complaints, vendor messages, and billing payment-run urgency.
+- Started the `feature/reply-drafting` branch.
+- Added category-specific suggested reply drafts with tone and next-step guidance.
+- Displayed editable reply drafts in the Streamlit review queue.
+- Added tests for billing, support, complaint, and full sample-message reply coverage.
