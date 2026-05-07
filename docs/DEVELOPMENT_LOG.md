@@ -22,3 +22,7 @@ This log records real work from the start of the project. It does not invent pri
 - Added extraction for email addresses, phone numbers, money amounts, invoice IDs, operational IDs, dates, and times.
 - Displayed extracted details in the Streamlit review queue.
 - Added tests for sample-data extraction behavior and formatted entity output.
+- Started the `feature/urgency-routing` branch.
+- Added urgency scoring, SLA targets, manager-review flags, and routing reasons.
+- Updated the Streamlit review queue with urgency progress indicators and manager review warnings.
+- Added tests for critical support, complaints, vendor messages, and billing payment-run urgency.

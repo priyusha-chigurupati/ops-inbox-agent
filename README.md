@@ -6,9 +6,9 @@ This repository is being built step by step as a production-minded portfolio pro
 
 ## Current Status
 
-Phase 4: entity extraction.
+Phase 5: urgency scoring and routing.
 
-The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, entity extraction, tests, and a Streamlit review queue preview.
+The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, urgency scoring, SLA targets, entity extraction, tests, and a Streamlit review queue preview.
 
 ## Tech Stack
 
@@ -78,4 +78,5 @@ feature/sample-inbox-data
 feature/setup-run-commands
 feature/classification-engine
 feature/entity-extraction
+feature/urgency-routing
 ```
