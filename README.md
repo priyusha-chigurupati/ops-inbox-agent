@@ -6,9 +6,9 @@ This repository is being built step by step as a production-minded portfolio pro
 
 ## Current Status
 
-Phase 3: classification engine.
+Phase 4: entity extraction.
 
-The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, tests, and a Streamlit review queue preview.
+The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, entity extraction, tests, and a Streamlit review queue preview.
 
 ## Tech Stack
 
@@ -77,4 +77,5 @@ feature/project-scaffold
 feature/sample-inbox-data
 feature/setup-run-commands
 feature/classification-engine
+feature/entity-extraction
 ```

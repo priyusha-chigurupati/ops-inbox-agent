@@ -1,6 +1,7 @@
 import streamlit as st
 
 from src.ops_inbox.core.classifier import classify_messages
+from src.ops_inbox.core.entity_extractor import extract_entities, format_entities
 from src.ops_inbox.config import APP_NAME
 from src.ops_inbox.data.inbox_repository import load_sample_messages
 
@@ -46,6 +47,9 @@ def render_page_shell() -> None:
             cols[2].badge(result.priority.title(), color=_priority_color(result.priority))
             cols[3].markdown(f"**{result.owner}**")
             st.write(message.preview)
+            entity_rows = format_entities(extract_entities(message))
+            if entity_rows:
+                st.markdown(" · ".join(f"`{row}`" for row in entity_rows))
             st.caption(
                 f"Confidence: {int(result.confidence * 100)}% · Signals: "
                 f"{', '.join(result.matched_terms) or 'fallback'}"

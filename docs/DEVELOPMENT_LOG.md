@@ -18,3 +18,7 @@ This log records real work from the start of the project. It does not invent pri
 - Added deterministic message classification, priority detection, owner routing, confidence scoring, and reasoning terms.
 - Updated the Streamlit scaffold into a review queue preview backed by sample data.
 - Added tests that compare predicted labels against expected sample-data labels.
+- Started the `feature/entity-extraction` branch.
+- Added extraction for email addresses, phone numbers, money amounts, invoice IDs, operational IDs, dates, and times.
+- Displayed extracted details in the Streamlit review queue.
+- Added tests for sample-data extraction behavior and formatted entity output.

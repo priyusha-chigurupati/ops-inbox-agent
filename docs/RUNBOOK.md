@@ -95,6 +95,28 @@ python -m streamlit run app.py
 
 Open the local URL shown by Streamlit. The review queue should show sample inbox items with category, priority, owner, confidence, and matched signal terms.
 
+## Phase 4 Verification
+
+Switch to the entity extraction branch:
+
+```powershell
+git checkout feature/entity-extraction
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
+
+Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Open the local URL shown by Streamlit. Each review queue item should now show extracted details such as sender email, phone number, invoice number, dollar amount, date, time, or operational ID when present.
+
 ## Streamlit Troubleshooting
 
 If this command fails:
