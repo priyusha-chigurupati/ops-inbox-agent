@@ -30,3 +30,8 @@ This log records real work from the start of the project. It does not invent pri
 - Added category-specific suggested reply drafts with tone and next-step guidance.
 - Displayed editable reply drafts in the Streamlit review queue.
 - Added tests for billing, support, complaint, and full sample-message reply coverage.
+- Started the `feature/task-queue-export` branch.
+- Added task queue records that combine classification, routing, extracted entities, and reply next steps.
+- Added CSV export for review tasks.
+- Displayed a task queue table and download button in Streamlit.
+- Added tests for task generation, routing data, CSV columns, and CSV escaping.

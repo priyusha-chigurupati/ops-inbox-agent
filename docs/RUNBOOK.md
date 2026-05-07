@@ -161,6 +161,28 @@ python -m streamlit run app.py
 
 Open the local URL shown by Streamlit. Each review card should include a `Suggested reply` expander with an editable draft, tone, and next-step guidance.
 
+## Phase 7 Verification
+
+Switch to the task queue export branch:
+
+```powershell
+git checkout feature/task-queue-export
+```
+
+Run all tests:
+
+```powershell
+python -m unittest discover -s tests
+```
+
+Start the app:
+
+```powershell
+python -m streamlit run app.py
+```
+
+Open the local URL shown by Streamlit. The review page should include a `Task queue export` section with a table and a `Download task queue CSV` button.
+
 ## Streamlit Troubleshooting
 
 If this command fails:

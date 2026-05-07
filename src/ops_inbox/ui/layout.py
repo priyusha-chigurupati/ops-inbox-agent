@@ -6,6 +6,7 @@ from src.ops_inbox.config import APP_NAME
 from src.ops_inbox.data.inbox_repository import load_sample_messages
 from src.ops_inbox.services.reply_drafts import build_reply_draft
 from src.ops_inbox.services.routing import build_routing_decision
+from src.ops_inbox.services.task_queue import build_task_queue, task_queue_to_csv
 
 
 def render_page_shell() -> None:
@@ -42,6 +43,7 @@ def render_page_shell() -> None:
 
     st.subheader("Review Queue")
     st.caption("Sample messages are classified with deterministic rules so results are explainable and testable.")
+    _render_task_queue(messages)
 
     for message, result in classified:
         entities = extract_entities(message)
@@ -75,6 +77,32 @@ def render_page_shell() -> None:
                     key=f"reply-{message.id}",
                     label_visibility="collapsed",
                 )
+
+
+def _render_task_queue(messages) -> None:
+    tasks = build_task_queue(messages)
+    rows = [
+        {
+            "Task": task.task_id,
+            "Subject": task.subject,
+            "Category": task.category.replace("_", " ").title(),
+            "Priority": task.priority.title(),
+            "Owner": task.owner,
+            "Urgency": task.urgency_score,
+            "SLA": task.sla,
+            "Status": task.status,
+        }
+        for task in tasks
+    ]
+
+    with st.expander("Task queue export", expanded=True):
+        st.dataframe(rows, hide_index=True, width="stretch")
+        st.download_button(
+            "Download task queue CSV",
+            data=task_queue_to_csv(tasks),
+            file_name="ops_inbox_task_queue.csv",
+            mime="text/csv",
+        )
 
 
 def _priority_color(priority: str) -> str:

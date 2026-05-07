@@ -6,9 +6,9 @@ This repository is being built step by step as a production-minded portfolio pro
 
 ## Current Status
 
-Phase 6: reply drafting.
+Phase 7: task queue and CSV export.
 
-The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, urgency scoring, SLA targets, entity extraction, suggested reply drafts, tests, and a Streamlit review queue preview.
+The app currently includes realistic sample inbox records, a typed data loader, deterministic classification, priority detection, owner routing, urgency scoring, SLA targets, entity extraction, suggested reply drafts, task queue export, tests, and a Streamlit review queue preview.
 
 ## Tech Stack
 
@@ -80,4 +80,5 @@ feature/classification-engine
 feature/entity-extraction
 feature/urgency-routing
 feature/reply-drafting
+feature/task-queue-export
 ```
