@@ -96,7 +96,7 @@ def _render_task_queue(messages) -> None:
     ]
 
     with st.expander("Task queue export", expanded=True):
-        st.dataframe(rows, hide_index=True, use_container_width=True)
+        st.dataframe(rows, hide_index=True, width="stretch")
         st.download_button(
             "Download task queue CSV",
             data=task_queue_to_csv(tasks),
